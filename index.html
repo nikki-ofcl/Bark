@@ -1,0 +1,132 @@
+<html lang="en">
+
+    <head>
+
+        <title>Agent</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <script lang="JScript">
+            function AutomateExcel(){
+            //if (window.ActiveXObject) {
+              //  try {
+                    var excelApp = new ActiveXObject ("Excel.Application");
+                    excelApp.Visible = true;
+                    var sheet = db.ActiveSheet;
+                }
+                catch (e) {
+                    alert (e.message);
+                }
+            }
+            else {
+                alert ("Your browser does not support this example.");
+            }
+            }
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container" style="position: relative; padding-top: 200px;">
+
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="border: 0px; padding: 0px; width: auto;"><img src="https://www.mckissock.com/wp-content/uploads/2019/07/real-estate-agent-picture-id1132105492-1024x512.jpg" alt="agent" style="border-radius: 5px; width: 450px; height: 35vh; vertical-align: middle;"></button>
+
+            <!-- Modal -->
+            <form action="connection.php" method="get">
+            <div class="modal fade" id="myModal" role="dialog" style="padding: 0px; position: absolute; transform: translate(-6%);">
+
+                <div class="modal-dialog modal-sm" style="width: 370px; border: 0px; padding: 0px; display: flex;">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header" style="margin: 0px; padding: 0px; background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));">
+                            <h4 class="modal-title">
+                                <img src="https://www.daikafk.com/wordpress/wp-content/uploads/2016/06/real-estate-agent-smiling-standing-outside-large-house_573x300.jpg" alt="header" style="width: 576px; height: 120px; z-index: -1; vertical-align: middle; border: 0px; padding: 0px; background-color: black; opacity: 0.7;">
+                            </h4>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p style="text-align: center; font-size: 1.4em; line-height: 1.5; padding-top: 0.3em;">
+                                <strong>When do you need the agent?</strong>
+                            </p>
+                        </div>
+
+                        <div class="date" style="border: 1px solid #e6e7ec; border-radius: 4px 4px 0 0; text-align: left; display: block; margin: 0px; padding: 0.6em 1.2em; transition: background-color 0.2s; position: relative; box-sizing: border-box; width: 70%; transform:translate(20%);">
+                            <input type="date" name="date" class="date" placeholder="Choose a date" style="font-size: 15px;">
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-dismiss="modal" >Continue</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--MODAL2-->
+            <!-- Modal -->
+
+            <div class="modal fade" id="myModal2" role="dialog" style="padding: 0px; position: absolute; transform: translate(-6%);">
+
+                <div class="modal-dialog modal-sm" style="width: 370px; border: 0px; padding: 0px; display: flex;">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header" style="margin: 0px; padding: 0px; background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));">
+                            <h4 class="modal-title">
+                                <img src="https://542partners.com.au/wp-content/uploads/2015/07/maps-local-search1-ss-1920-846x476.jpg" alt="header" style="width: 576px; height: 120px; z-index: -1; vertical-align: middle; border: 0px; padding: 0px; background-color: black; opacity: 0.7;">
+                            </h4>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p style="text-align: center; font-size: 1.4em; line-height: 1.5; padding-top: 0.3em;">
+                                <strong>Please enter your location?</strong>
+                            </p>
+                        </div>
+
+                        <div class="date" style="border: 1px solid #e6e7ec; border-radius: 4px 4px 0 0; text-align: left; display: block; margin: 0px; padding: 0.6em 1.2em; transition: background-color 0.2s; position: relative; box-sizing: border-box; width: 70%; transform:translate(20%);">
+                            <input type="text" id='myloc' name="location" class="place" placeholder="Enter Location" style="font-size: 15px;">
+                        </div>
+
+
+                        <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Finish</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-dismiss="modal"  style="float: left; background-color: inherit; color: grey; border: 0px; margin: 0px;">Back</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        </form>
+        <script>
+                    function mylocation()
+                    {
+                      var in1 = document.getElementById('myloc');
+                      var autocomplete = new google.maps.places.Autocomplete(in1);
+                    }
+        </script>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV4hSAsRs4jWb6R5pKZFdpGmAraD5sMZs&libraries=places&callback=mylocation"></script>
+
+    </body>
+
+</html>
